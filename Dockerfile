@@ -1,5 +1,5 @@
 #
-# Docker container for inchi-1
+# Docker container for inchi-1 from iupac
 #
 FROM ubuntu
 MAINTAINER Kazuyoshi Ikeda, kazikeda@me.com
@@ -17,5 +17,4 @@ RUN cd /opt && \
     ln -s /opt/INCHI-1-API/INCHI/gcc/inchi-1/inchi-1 /usr/local/inchi-1 && \
     rm /opt/INCHI-1-API.zip
 
-ENV PATH $PATH:/usr/local/bin
-CMD ["inchi-1"]
+CMD ["/opt/INCHI-1-API/INCHI/gcc/inchi-1/inchi-1"]
